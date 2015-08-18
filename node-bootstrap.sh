@@ -20,26 +20,17 @@ then
     apt-get install -y nodejs
 
     # Update npm    
-    sudo npm install npm -g
+    sudo npm install  --unsafe-perm npm -g
 
     # Add debugging tools    
-    sudo npm install -g node-inspector  
+    sudo npm install --unsafe-perm -g node-inspector  
 
     # Get the generator toolstack
-    sudo npm install -g gulp
-    sudo npm install -g yo bower grunt-cli
+    sudo npm install --unsafe-perm -g gulp
+    sudo npm install --unsafe-perm -g yo bower grunt-cli
 
-    git clone https://github.com/pentadoc/react-starter-kit.git /vagrant/react-fullstack
+    git clone https://github.com/pentadoc/react-starter-kit.git react-fullstack
     
-    # Symlink our source to the host's dir
-    #ln -s ~/react-fullstack/ /vagrant/project    
-    
-    #init project
-    cd /vagrant/react-fullstack
-    npm install 
-    # Victory!
-    echo "You're almost done! Your default node server should now be set up to run on the host machine at localhost:3000."
-    gulp 
-    
-
+    #change owner
+    chown -R vagrant react-fullstack	
 fi
