@@ -29,13 +29,13 @@ then
     sudo npm install -g gulp
     sudo npm install -g yo bower grunt-cli
 
-    git clone https://github.com/pentadoc/react-starter-kit.git react-fullstack
+    git clone https://github.com/pentadoc/react-starter-kit.git /vagrant/react-fullstack
     
     # Symlink our source to the host's dir
-    ln -s ~/react-fullstack/ /vagrant/project    
+    #ln -s ~/react-fullstack/ /vagrant/project    
     
     #init project
-    cd react-fullstack
+    cd /vagrant/react-fullstack
     npm install 
     # Victory!
     echo "You're almost done! Your default node server should now be set up to run on the host machine at localhost:3000."
