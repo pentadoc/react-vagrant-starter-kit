@@ -9,4 +9,5 @@
    
 	# Victory!
 	echo "You're almost done! Your default node server should now be set up to run on the host machine at localhost:3000."
-	gulp 
+	cd /vagrant/react-fullstack
+    gulp
